@@ -43,3 +43,16 @@
 - git pull remote_name branch_name : 将github上的commit下拉到本地
 - git fetch remote_name : 下载github上master的commit，但是仅用它更新本地的远程副本分支，默认为origin/master，而不是真正的本地master，这样你的本地repository就有origin和master两个分支了，可以用merge将两个分支合并，实现pull的功能。这种方式用于当本地的commit和github上的commit不同步时，避免二者冲突。
 - git config --system core.longpaths true : 修改window路径长度限制
+
+
+## github新建、提交、下载流程
+### 新建
+- 在github上面新建一个repository
+- clone到本地
+- 在本地文件夹里新建文件等等
+### 提交
+- git add -a: 将所有文件加入到缓存区
+- git commit -a: 将所有缓存区的东西提交
+- git push origin master: 将所有“origin”remote的commit推到github上的“master”branch上
+### 下载
+- git pull origin master: 将github上的“master”branch上的commit下拉到本地的“origin”remote
